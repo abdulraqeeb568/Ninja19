@@ -1,134 +1,95 @@
-import React from "react";
-import { SlideContent } from "./Components";
-import { color } from "framer-motion";
-// import "bootstrap/dist/css/bootstrap.css";
-import { Col, Row } from "react-bootstrap";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+// import styled from "styled-components";
 
-export default function Contact() {
+// npm i @emailjs/browser
+
+const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_z3kzueb", "template_wqpx3rk", form.current, {
+        publicKey: "h1ABp3-Ej7heywhkv",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <div class="unslate_co--section" id="contact-section">
-      <div class="container">
-        <SlideContent>
-          <div class="section-heading-wrap text-center mb-5">
-            <h2
-              class="heading-h2 text-center divider"
-              style={{ color: "inherit" }}
-            >
-              <span>Get In Touch</span>
-            </h2>
-            <span>
-              <img
-                src={require("../images/divider.png")}
-                alt="divider"
-                width="76"
-              />
-            </span>
-          </div>
-        </SlideContent>
-
-        <div class="row justify-content-between">
-          <div class="col-md-6">
-            <form method="post" class="" id="contactForm">
-              <div class="row mb-0" style={{}}>
-                <div class="col-lg-6 mb-2 ml-0 pl-0 pr-0 pr-lg-2">
-                  <input
-                    class="w-100"
-                    name="name"
-                    type="text"
-                    id="name"
-                    placeholder="Name"
-                    style={{ backgroundColor: "#212528", color: "white" }}
-                  />
-                </div>
-                <div class="col-lg-6 mb-2 mr-0 pr-0 ml-0 pl-0">
-                  <input
-                    class="w-100"
-                    name="email"
-                    type="email"
-                    id="email"
-                    placeholder="Email"
-                    style={{ backgroundColor: "#212528", color: "white" }}
-                  />
-                </div>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="7"
-                  class="col-lg-12 pt-20 "
-                  placeholder="Write your message..."
-                  style={{ backgroundColor: "#212528", color: "white" }}
-                ></textarea>
-              </div>
-              <div class="form-group row   ">
-                <div class="col-md-12 d-flex align-items-center">
-                  <input
-                    type="submit"
-                    class="btn btn-outline-pill btn-custom-light mr-3"
-                    value="Send Message"
-                  />
-                  <span class="submitting"></span>
-                </div>
-              </div>
-            </form>
-            <div id="form-message-warning" class="mt-4"></div>
-            <div id="form-message-success">
-              Your message was sent, thank you!
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <SlideContent>
-              <div class="contact-info-v1">
-                <div class=" d-block">
-                  <span
-                    class="d-block contact-info-label"
-                    style={{ color: "inherit" }}
-                  >
-                    Email
-                  </span>
-                  <a
-                    href="#"
-                    class="contact-info-val"
-                    style={{ color: "inherit" }}
-                  >
-                    info@yourdomain.com
-                  </a>
-                </div>
-                <div class="d-block">
-                  <span
-                    class="d-block contact-info-label"
-                    style={{ color: "inherit" }}
-                  >
-                    Phone
-                  </span>
-                  <a
-                    href="#"
-                    class="contact-info-val"
-                    style={{ color: "inherit" }}
-                  >
-                    +12 345 6789 012
-                  </a>
-                </div>
-                <div class=" d-block">
-                  <span
-                    class="d-block contact-info-label"
-                    style={{ color: "inherit" }}
-                  >
-                    Address
-                  </span>
-                  <address
-                    class="contact-info-val"
-                    style={{ color: "inherit" }}
-                  >
-                    273 South Riverview Rd. <br /> New York, NY 10011
-                  </address>
-                </div>
-              </div>
-            </SlideContent>
-          </div>
-        </div>
-      </div>
-    </div>
+    <form ref={form} onSubmit={sendEmail}>
+      <label>Name</label>
+      <input type="text" name="user_name" />
+      <label>Email</label>
+      <input type="email" name="user_email" />
+      <label>Message</label>
+      <textarea name="message" />
+      <input type="submit" value="Send" />
+    </form>
   );
-}
+};
+
+export default Contact;
+
+// Styles
+// const StyledContactForm = styled.div`
+//   width: 400px;
+
+//   form {
+//     display: flex;
+//     align-items: flex-start;
+//     flex-direction: column;
+//     width: 100%;
+//     font-size: 16px;
+
+//     input {
+//       width: 100%;
+//       height: 35px;
+//       padding: 7px;
+//       outline: none;
+//       border-radius: 5px;
+//       border: 1px solid rgb(220, 220, 220);
+
+//       &:focus {
+//         border: 2px solid rgba(0, 206, 158, 1);
+//       }
+//     }
+
+//     textarea {
+//       max-width: 100%;
+//       min-width: 100%;
+//       width: 100%;
+//       max-height: 100px;
+//       min-height: 100px;
+//       padding: 7px;
+//       outline: none;
+//       border-radius: 5px;
+//       border: 1px solid rgb(220, 220, 220);
+
+//       &:focus {
+//         border: 2px solid rgba(0, 206, 158, 1);
+//       }
+//     }
+
+//     label {
+//       margin-top: 1rem;
+//     }
+
+//     input[type="submit"] {
+//       margin-top: 2rem;
+//       cursor: pointer;
+//       background: rgb(249, 105, 14);
+//       color: white;
+//       border: none;
+//     }
+//   }
+// `;
