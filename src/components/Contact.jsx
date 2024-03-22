@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { SlideContent } from "./Components";
+
 // import styled from "styled-components";
+// import "bootstrap/dist/css/bootstrap.css";
 
 // npm i @emailjs/browser
 
@@ -26,15 +29,74 @@ const Contact = () => {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <div class="row ">
+      <div className="col-md-6">
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="row ">
+            <div className="col-lg-6">
+              <input
+                className="w-100"
+                placeholder="Name"
+                type="text"
+                name="user_name"
+              />
+            </div>
+            <dov className="col-lg-6">
+              <input
+                className="w-100"
+                placeholder="Email"
+                type="email"
+                name="user_email"
+              />
+            </dov>
+          </div>
+
+          <div className="col-lg-12 ">
+            <textarea className="w-100" placeholder="Message" name="message" />
+          </div>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+      <div class="col-md-4">
+        <SlideContent>
+          <div class="contact-info-v1">
+            <div class=" d-block">
+              <span
+                class="d-block contact-info-label"
+                style={{ color: "inherit" }}
+              >
+                Email
+              </span>
+              <a href="#" class="contact-info-val" style={{ color: "inherit" }}>
+                info@yourdomain.com
+              </a>
+            </div>
+            <div class="d-block">
+              <span
+                class="d-block contact-info-label"
+                style={{ color: "inherit" }}
+              >
+                Phone
+              </span>
+              <a href="#" class="contact-info-val" style={{ color: "inherit" }}>
+                +12 345 6789 012
+              </a>
+            </div>
+            <div class=" d-block">
+              <span
+                class="d-block contact-info-label"
+                style={{ color: "inherit" }}
+              >
+                Address
+              </span>
+              <address class="contact-info-val" style={{ color: "inherit" }}>
+                273 South Riverview Rd. <br /> New York, NY 10011
+              </address>
+            </div>
+          </div>
+        </SlideContent>
+      </div>
+    </div>
   );
 };
 
