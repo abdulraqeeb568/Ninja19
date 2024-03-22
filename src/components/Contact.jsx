@@ -1,7 +1,7 @@
 import React from "react";
 import { SlideContent } from "./Components";
 import { color } from "framer-motion";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 import { Col, Row } from "react-bootstrap";
 
 export default function Contact() {

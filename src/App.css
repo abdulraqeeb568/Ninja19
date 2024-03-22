@@ -32,7 +32,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container h3,
+p {
+  color: #EAEBEC
 }

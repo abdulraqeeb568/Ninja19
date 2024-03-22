@@ -1,16 +1,18 @@
 // import { ArrowRightIcon } from "@heroicons/react/solid";
 import React from "react";
-import "../css/css/bootstrap/bootstrap.css";
-import "../css/css/style.css";
+// import "../css/css/bootstrap/bootstrap.css";
+// import "../css/css/style.css";
 import * as Constants from "../Constants";
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function Navbar() {
   return (
-    <nav class="unslate_co--site-nav site-nav-target">
+    // <nav class="unslate_co--site-nav site-nav-target">
+    <nav class="unslate_co--site-nav ">
       <div class="container">
-        <div class="row align-items-center justify-content-between text-left">
-          <div class="col-md-5 text-right">
-            <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+        <div class="row ">
+          <div class="col-md-5 justify-content-end d-flex">
+            <ul class="site-nav-ul text-right ">
               {/* <li class="has-children">
                 <a href="#home-section" class="nav-link">
                   Home
@@ -50,14 +52,15 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div class="site-logo pos-absolute">
-            <a href="index.html" class="unslate_co--site-logo">
+          <div class="col-md-2 text-center">
+            <img height={60} src={require("../images/ninjaLogo.png")} />
+            {/* <a href="index.html" class="unslate_co--site-logo">
               {Constants.ProjectName}
               <span>.</span>
-            </a>
+            </a> */}
           </div>
-          <div class="col-md-5 text-right text-lg-left">
-            <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+          <div class="col-md-5  text-lg-left">
+            <ul class="site-nav-ul text-left d-none d-lg-inline-block">
               <li>
                 <a href="#skills-section" class="nav-link">
                   Skills

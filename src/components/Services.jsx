@@ -7,6 +7,7 @@ import { ReactComponent as WebDev } from "../images/svg/web-development.svg";
 import { ReactComponent as UserExp } from "../images/svg/user-experience.svg";
 import { ReactComponent as WordpressSol } from "../images/svg/wordpress-sol.svg";
 import { ReactComponent as MobileApps } from "../images/svg/mobile-apps.svg";
+import "../App.css";
 
 export default function Services() {
   return (
@@ -29,7 +30,7 @@ export default function Services() {
 
         <div class="row gutter-v3">
           <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+            <div class="feature-v1" data-aos-delay="0">
               <AppearFromDown>
                 <div class="wrap-icon mb-3">
                   <DigitalStrategy width={45} height={45} />

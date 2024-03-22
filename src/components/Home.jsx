@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "../css/css/bootstrap/bootstrap.css";
+// import "../css/css/bootstrap/bootstrap.css";
 // import '../css/vendor/owl.carousel.min.css'
-import "../css/css/style.css";
+// import "../css/css/style.css";
 // import "../css/scss/components/_contents.scss";
 import Projects from "./Projects";
 import About from "./About";
@@ -13,15 +13,16 @@ import Footer from "./Footer";
 import Navbar from "../components/Navbar";
 import * as Constants from "../Constants";
 import Reveal from "../components/Components";
-import ninjaDev from "../images/ninjaDev.png";
+import ninjaCover from "../images/ninjaCover.png";
 export default function Home() {
   const Cover = () => {
     return (
       <div
         className="cover-v1 jarallax"
-        // style={{
-        //   backgroundImage: `url(${ninjaDev})`,
-        // }}
+        style={{
+          backgroundImage: `url(${ninjaCover})`,
+          backgroundSize: "cover",
+        }}
         id="home-section"
       >
         <div className="container">
