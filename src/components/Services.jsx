@@ -16,7 +16,7 @@ export default function Services() {
         <div class="section-heading-wrap text-center mb-5">
           <h2 class="heading-h2 text-center divider">
             <SlideContent>
-              <span>My Services</span>
+              <span>Our Services</span>
             </SlideContent>
           </h2>
           <span>
@@ -30,22 +30,6 @@ export default function Services() {
 
         <div class="row gutter-v3">
           <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos-delay="0">
-              <AppearFromDown>
-                <div class="wrap-icon mb-3">
-                  <DigitalStrategy width={45} height={45} />
-                </div>
-                <h3>
-                  Digital <br /> Strategy
-                </h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
-                </p>
-              </AppearFromDown>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
             <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
               <AppearFromDown delay={0.25}>
                 <div class="wrap-icon mb-3">
@@ -55,24 +39,8 @@ export default function Services() {
                   Web <br /> Design
                 </h3>
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
-                </p>
-              </AppearFromDown>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
-              <AppearFromDown delay={0.5}>
-                <div class="wrap-icon mb-3">
-                  <UserExp width={45} height={45} />
-                </div>
-                <h3>
-                  User <br /> Experience
-                </h3>
-                <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
+                  Implementing the plan for designing a website in a way that is
+                  functional and offers a good user experience.{" "}
                 </p>
               </AppearFromDown>
             </div>
@@ -88,8 +56,9 @@ export default function Services() {
                   Web <br /> Development
                 </h3>
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
+                  From sleek, responsive designs to robust backend development,
+                  our web development services are crafted to enhance online
+                  presence and drive growth.{" "}
                 </p>
               </AppearFromDown>
             </div>
@@ -104,8 +73,8 @@ export default function Services() {
                   WordPress <br /> Solutions
                 </h3>
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
+                  Unleashing the potential of WordPress for captivating websites
+                  that drive success.{" "}
                 </p>
               </AppearFromDown>
             </div>
@@ -120,8 +89,42 @@ export default function Services() {
                   Mobile <br /> Applications
                 </h3>
                 <p>
-                  A small river named Duden flows by their place and supplies it
-                  with the necessary regelialia.{" "}
+                  Building innovative mobile solutions to connect your brand
+                  with users on-the-go, driving engagement and growth.{" "}
+                </p>
+              </AppearFromDown>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="feature-v1" data-aos-delay="0">
+              <AppearFromDown>
+                <div class="wrap-icon mb-3">
+                  <DigitalStrategy width={45} height={45} />
+                </div>
+                <h3>
+                  Desktop <br /> Development
+                </h3>
+                <p>
+                  User-centric applications for enhanced experiences and
+                  streamlined operations. Our desktop development services are
+                  crafted to optimize productivity and elevate user experiences.{" "}
+                </p>
+              </AppearFromDown>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+              <AppearFromDown delay={0.5}>
+                <div class="wrap-icon mb-3">
+                  <UserExp width={45} height={45} />
+                </div>
+                <h3>
+                  Windows <br /> Services
+                </h3>
+                <p>
+                  Delivering scalable Windows services that not only optimize
+                  business functionalities but also empower growth by boosting
+                  operational efficiency and effectiveness.{" "}
                 </p>
               </AppearFromDown>
             </div>

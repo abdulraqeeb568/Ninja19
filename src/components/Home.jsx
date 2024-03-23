@@ -21,7 +21,9 @@ export default function Home() {
         className="cover-v1 jarallax"
         style={{
           backgroundImage: `url(${ninjaCover})`,
-          backgroundSize: "cover",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat" /* Prevent the image from repeating */,
+          backgroundPosition: "right",
         }}
         id="home-section"
       >

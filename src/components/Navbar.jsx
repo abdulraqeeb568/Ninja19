@@ -53,7 +53,7 @@ export default function Navbar() {
             </ul>
           </div>
           <div class="col-md-2 text-center">
-            <img height={60} src={require("../images/ninjaLogo.png")} />
+            <img height={40} src={require("../images/ninjaLogo.png")} />
             {/* <a href="index.html" class="unslate_co--site-logo">
               {Constants.ProjectName}
               <span>.</span>

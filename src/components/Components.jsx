@@ -12,8 +12,13 @@ import {
 interface Props {
   children: JSX.Element;
   width?: "Fit-Content" | "100%";
+  height?: "100%";
 }
-export const Reveal = ({ children, width = "Fit-Content" }: Props) => {
+export const Reveal = ({
+  children,
+  width = "Fit-Content",
+  height = "100%",
+}: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
   const handleAnimate = async () => {
@@ -35,6 +40,7 @@ export const Reveal = ({ children, width = "Fit-Content" }: Props) => {
         position: "relative",
         overflow: "hidden",
         width,
+        height,
       }}
       className="mx-auto text-center"
     >
@@ -50,22 +56,27 @@ export const Reveal = ({ children, width = "Fit-Content" }: Props) => {
           background: "var(--brand)",
           color: "transparent",
           overflow: "hidden",
+          height: "100%",
         }}
       >
         {children}
       </div>
-      <div id="content" style={{ color: "transparent" }}>
+      <div id="content" style={{ color: "transparent", height: "100%" }}>
         {children}
       </div>
     </div>
   );
 };
-export const RevealImage = ({ children, width = "Fit-Content" }: Props) => {
+export const RevealImage = ({
+  children,
+  width = "Fit-Content",
+  height = "100%",
+}: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
   const handleAnimate = async () => {
     await animate("#sliderGrows", { width: "100%" }, { duration: 0.5 });
-    await animate("#content", { display: "white" }, { duration: 0.5 });
+    await animate("#content", { opacity: "100%" }, { duration: 0.5 });
     await animate(
       "#sliderGrows",
       { left: "100%", width: 0 },
@@ -82,6 +93,7 @@ export const RevealImage = ({ children, width = "Fit-Content" }: Props) => {
         position: "relative",
         overflow: "hidden",
         width,
+        height,
       }}
       className="mx-auto text-center"
     >
@@ -97,11 +109,13 @@ export const RevealImage = ({ children, width = "Fit-Content" }: Props) => {
           background: "var(--brand)",
           color: "transparent",
           overflow: "hidden",
+          height: "100%",
+          zIndex: 200,
         }}
       >
-        {children}
+        {}
       </div>
-      <div id="content" style={{ color: "transparent" }}>
+      <div id="content" style={{ opacity: "0", height: "100%" }}>
         {children}
       </div>
     </div>
@@ -259,6 +273,7 @@ export const AppearFromDown = ({
         transition={{ duration: 0.4, delay: delay }}
         animate={content}
         initial="hidden"
+        style={{ width }}
       >
         {children}
       </motion.div>

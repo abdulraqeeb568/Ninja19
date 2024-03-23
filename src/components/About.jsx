@@ -11,7 +11,7 @@ export default function About() {
       <div class="container">
         <div class="section-heading-wrap text-center mb-5">
           <h2 class="heading-h2 text-center divider">
-            <span style={{ color: "inherit" }}>About Me</span>
+            <span style={{ color: "inherit" }}>About Us</span>
           </h2>
           <span>
             <img
@@ -23,43 +23,52 @@ export default function About() {
         </div>
 
         <div class="row mt-5 justify-content-between">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <figure class="dotted-bg gsap-reveal-img ">
-              <RevealImage>
+          <div class="col-lg-6 mb-5 mb-lg-0 justify-content-center d-flex mt-5">
+            <div style={{ height: "60%" }}>
+              <RevealImage height="100%">
                 <img
-                  src={require("../images/about_me_pic2.jpg")}
+                  src={require("../images/ninjaLogo.png")}
                   alt="Image"
-                  class="img-fluid"
+                  class="img-fluid "
+                  style={{ height: "100%" }}
                 />
               </RevealImage>
-            </figure>
+            </div>
           </div>
-          <div class="col-lg-4 pr-lg-5">
-            <SlideContent>
-              <h3 class="mb-4 heading-h3" style={{ color: "inherit" }}>
-                <span>We can make it together</span>
-              </h3>
-            </SlideContent>
-            <SlideContent delay={0.2}>
-              <p class="lead">
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-            </SlideContent>
-            <SlideContent delay={0.4}>
-              <p class="mb-4 ">
-                A small river named Duden flows by their place and supplies it
-                with the necessary regelialia. It is a paradisematic country, in
-                which roasted parts of sentences fly into your mouth.
-              </p>
-            </SlideContent>
-            <AppearFromDown delay={0.8}>
-              <p>
-                <a href="#" class="btn btn-outline-pill btn-custom-light">
-                  Download my CV
-                </a>
-              </p>
-            </AppearFromDown>
+          <div class="col-lg-6 pr-lg-5 ">
+            <div style={{ width: "74%" }}>
+              <SlideContent>
+                <h3 class="mb-4 heading-h3" style={{ color: "inherit" }}>
+                  <span style={{ color: "inherit" }}>
+                    We can make it together
+                  </span>
+                </h3>
+              </SlideContent>
+              <SlideContent delay={0.2}>
+                <p class="" style={{ color: "inherit" }}>
+                  Ninja Nineteen is a cutting-edge software company dedicated to
+                  delivering innovative solutions that empower businesses to
+                  thrive in the digital age.
+                </p>
+              </SlideContent>
+              <SlideContent delay={0.4}>
+                <p class="mb-4 " style={{ color: "inherit" }}>
+                  With a focus on creativity, efficiency, and excellence, we
+                  specialize in crafting custom software solutions tailored to
+                  meet the unique needs of each client.
+                </p>
+              </SlideContent>
+              <SlideContent delay={0.6}>
+                <p class="mb-4 " style={{ color: "inherit" }}>
+                  Our team of skilled developers and designers are committed to
+                  pushing the boundaries of technology to drive success for our
+                  clients. Whether you're looking to streamline operations,
+                  enhance user experiences, or revolutionize your online
+                  presence, Ninja Nineteen is your trusted partner for
+                  transformative software solutions.
+                </p>
+              </SlideContent>
+            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@ export default function Skills() {
         <div class="section-heading-wrap text-center mb-5">
           <h2 class="heading-h2 text-center divider">
             <SlideContent>
-              <span style={{ color: "inherit" }}>My Skills</span>
+              <span style={{ color: "inherit" }}>Our Skills</span>
             </SlideContent>
           </h2>
           <span>
