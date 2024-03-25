@@ -31,18 +31,25 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-md-7 mx-auto text-center">
               <Reveal>
-                <h2 className="heading" style={{ color: "inherit" }}>
+                <h2
+                  className="heading"
+                  style={{ color: "inherit", fontWeight: "bold" }}
+                >
                   {Constants.ProjectName}
                 </h2>
               </Reveal>
               <Reveal>
-                <h3
+                <h2
                   className="subheading "
-                  style={{ color: "inherit", paddingLeft: 0 }}
+                  style={{
+                    color: "inherit",
+                    paddingLeft: 0,
+                    fontWeight: "lighter",
+                  }}
                 >
                   Unlocking the agility of tech dojo. Swift, adaptable, and
                   ever-ready to conquer the ever-evolving landscape of software
-                </h3>
+                </h2>
               </Reveal>
             </div>
           </div>
