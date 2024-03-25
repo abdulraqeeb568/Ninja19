@@ -1,7 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { AppearFromDown, SlideContent } from "./Components";
 import * as Constants from "../Constants";
+import { Spinner, Row } from "react-bootstrap";
+import { useState } from "react";
 
 // import styled from "styled-components";
 // import "bootstrap/dist/css/bootstrap.css";
@@ -10,9 +12,36 @@ import * as Constants from "../Constants";
 
 const Contact = () => {
   const form = useRef();
+  const [emailResponse, setEmailResponse] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(true);
+  const [isEmail, setIsEmail] = useState(true);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [nameBorderColor, setNameBorderColor] = useState("transparent");
+  const [emailBorderColor, setEmailBorderColor] = useState("transparent");
+  const [messageBorderColor, setMessageBorderColor] = useState("transparent");
+  const handleEmail = (value) => {
+    setIsValidEmail(Constants.EmailRegex.test(value));
+    value ? setIsEmail(true) : setIsEmail(false);
+    setEmail(value);
+  };
 
+  useEffect(() => {
+    // Set a timeout to hide the email response after 5 seconds (5000 milliseconds)
+  }, []);
   const sendEmail = (e) => {
     e.preventDefault();
+    name ? setNameBorderColor("transparent") : setNameBorderColor("red");
+    email ? setEmailBorderColor("transparent") : setEmailBorderColor("red");
+    message
+      ? setMessageBorderColor("transparent")
+      : setMessageBorderColor("red");
+    if (!name || !email || !message) return;
+    setIsLoading(true);
+
+    console.log("before" + isLoading);
 
     emailjs
       .sendForm("service_z3kzueb", "template_wqpx3rk", form.current, {
@@ -20,13 +49,38 @@ const Contact = () => {
       })
       .then(
         (result) => {
+          setEmailResponse(
+            <span
+              style={{
+                color: "#617559",
+              }}
+            >
+              Message sent successfully
+            </span>
+          );
           console.log(result.text);
           console.log("message sent");
         },
         (error) => {
+          setEmailResponse(
+            <span style={{ color: "#617559" }}>
+              Cannot send message at the moment. Please contact{" "}
+              <strong style={{ color: "red" }}>ninja19.dev@gmail.com</strong>
+            </span>
+          );
           console.log(error.text);
+          setIsLoading(false);
         }
       );
+    setIsLoading(false);
+    console.log("after" + isLoading);
+
+    const timeoutId = setTimeout(() => {
+      setEmailResponse(null); // Hide the email response by setting it to null
+    }, 5000);
+
+    // Cleanup function to clear the timeout when the component unmounts or emailResponse changes
+    return () => clearTimeout(timeoutId);
   };
 
   return (
@@ -52,50 +106,96 @@ const Contact = () => {
 
         <div class="row mt-5 pt-5">
           <div className="col-md-6 text-center text-lg-start">
-            <AppearFromDown width="100%">
-              <form ref={form} onSubmit={sendEmail}>
-                <div className="row ">
-                  <div className="col-lg-6 mb-2">
-                    <input
-                      className="w-100"
-                      placeholder="Name"
-                      type="text"
-                      name="user_name"
+            {!isLoading ? (
+              <AppearFromDown width="100%">
+                <form ref={form} onSubmit={sendEmail}>
+                  <div className="row ">
+                    <div className="col-lg-6 mb-2">
+                      <input
+                        className="w-100"
+                        placeholder="Name"
+                        type="text"
+                        name="user_name"
+                        onChange={(event) => setName(event.target.value)}
+                        style={{
+                          borderColor: nameBorderColor,
+                          borderRadius: 5,
+                        }}
+                      />
+                    </div>
+                    <div className="col-lg-6 mb-2">
+                      <input
+                        className="w-100"
+                        placeholder="Email"
+                        type="email"
+                        name="user_email"
+                        onChange={(event) => handleEmail(event.target.value)}
+                        style={{
+                          borderColor: emailBorderColor,
+                          borderRadius: 5,
+                        }}
+                      />
+                      {console.log("isValid" + isValidEmail)}
+                      {!isValidEmail && isEmail && (
+                        <div style={{ color: "red" }}>Email is invalid</div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="col-lg-12 mb-2">
+                    <textarea
+                      className="w-100 "
+                      cols="30"
+                      rows="7"
+                      placeholder="Message"
+                      name="message"
+                      onChange={(event) => setMessage(event.target.value)}
+                      style={{
+                        borderColor: messageBorderColor,
+                        borderRadius: 5,
+                      }}
                     />
                   </div>
-                  <dov className="col-lg-6 mb-2">
+                  <AppearFromDown delay={0.2}>
                     <input
-                      className="w-100"
-                      placeholder="Email"
-                      type="email"
-                      name="user_email"
+                      class="btn btn-outline-pill btn-custom-light mb-4"
+                      type="submit"
+                      value="Send Email"
                     />
-                  </dov>
-                </div>
-
-                <div className="col-lg-12 mb-2">
-                  <textarea
-                    className="w-100 "
-                    cols="30"
-                    rows="7"
-                    placeholder="Message"
-                    name="message"
-                  />
-                </div>
-                <AppearFromDown delay={0.2}>
-                  <input
-                    class="btn btn-outline-pill btn-custom-light mb-2"
-                    type="submit"
-                    value="Send Email"
-                  />
+                  </AppearFromDown>
+                </form>
+                <AppearFromDown>
+                  <div className="mb-4">
+                    {emailResponse && (
+                      <div
+                        style={{
+                          backgroundColor: "#DFF2D6",
+                          borderRadius: 5,
+                          borderColor: "#617559",
+                          borderWidth: 5,
+                          padding: "5px 10px 5px 10px",
+                        }}
+                      >
+                        {emailResponse}
+                      </div>
+                    )}
+                  </div>
                 </AppearFromDown>
-              </form>
-            </AppearFromDown>
+              </AppearFromDown>
+            ) : (
+              <Row className="justify-content-center mt-5">
+                <Spinner
+                  animation="border"
+                  variant="secondary"
+                  className="spinner"
+                />
+              </Row>
+            )}
           </div>
           <div class="col-md-4">
             <SlideContent>
               <div class="contact-info-v1">
-                <div class=" d-block">
+                <div class="d-block">
                   <span
                     class="d-block contact-info-label "
                     style={{ color: "inherit" }}
@@ -144,7 +244,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      );
     </div>
   );
 };
