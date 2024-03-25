@@ -10,7 +10,7 @@ export default function Navbar() {
     // <nav class="unslate_co--site-nav site-nav-target">
     <nav class="unslate_co--site-nav ">
       <div class="container">
-        <div class="row ">
+        <div class="row " style={{ backgroundColor: "pink" }}>
           <div class="col-md-5 justify-content-end d-flex">
             <ul class="site-nav-ul text-right ">
               {/* <li class="has-children">
