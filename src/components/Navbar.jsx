@@ -5,14 +5,26 @@ import React from "react";
 import * as Constants from "../Constants";
 import "bootstrap/dist/css/bootstrap.css";
 
+import DropdownButton from "react-bootstrap/DropdownButton";
+import DropdownItem from "react-bootstrap/DropdownItem";
+import { FiAlignJustify } from "react-icons/fi";
+
 export default function Navbar() {
+  const handleSelect = (e) => {
+    e === "option-1"
+      ? console.log("Profile")
+      : e === "option-2"
+      ? console.log("Update Password")
+      : console.log("Logout");
+  };
+
   return (
     // <nav class="unslate_co--site-nav site-nav-target">
-    <nav class="unslate_co--site-nav ">
+    <nav class="unslate_co--site-nav p-1">
       <div class="container">
-        <div class="row " style={{ backgroundColor: "pink" }}>
-          <div class="col-md-5 justify-content-end d-flex">
-            <ul class="site-nav-ul text-right ">
+        <div class="row ">
+          <div class="col-5 justify-content-end d-flex">
+            <ul class="site-nav-ul d-none d-lg-inline-block">
               {/* <li class="has-children">
                 <a href="#home-section" class="nav-link">
                   Home
@@ -52,14 +64,14 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <div class="col-md-2 text-center">
+          <div class="col-md-2 text-center d-none d-lg-inline-block">
             <img height={40} src={require("../images/ninjaLogo.png")} />
             {/* <a href="index.html" class="unslate_co--site-logo">
               {Constants.ProjectName}
               <span>.</span>
             </a> */}
           </div>
-          <div class="col-md-5  text-lg-left">
+          <div class="col-md-5 text-lg-left">
             <ul class="site-nav-ul text-left d-none d-lg-inline-block">
               <li>
                 <a href="#skills-section" class="nav-link">
@@ -78,13 +90,32 @@ export default function Navbar() {
               </li>
             </ul>
 
-            <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-              <li>
-                <a href="#" class="js-menu-toggle">
-                  Menu
-                </a>
-              </li>
-            </ul>
+            <div className="d-flex justify-content-end ">
+              {/* <ul class="site-nav-ul-none-onepage d-inline-block d-lg-none">
+                <li>
+                  <a href="#" class="js-menu-toggle">
+                    Menu
+                  </a>
+                </li>
+              </ul> */}
+              <DropdownButton
+                className="d-inline-block mr-0 pr-0 d-lg-none"
+                variant="secondary"
+                style={{ marginRight: "-2%", marginTop: "2%", padding: 0 }}
+                title={
+                  <div>
+                    <FiAlignJustify style={{ color: "white" }} />
+                  </div>
+                }
+                id="dropdown-menu"
+                onSelect={handleSelect}
+              >
+                <DropdownItem eventKey="option-1">About</DropdownItem>
+                <DropdownItem eventKey="option-2">Services</DropdownItem>
+                <DropdownItem eventKey="option-3">Skills</DropdownItem>
+                <DropdownItem eventKey="option-3">Contact</DropdownItem>
+              </DropdownButton>
+            </div>
           </div>
         </div>
       </div>

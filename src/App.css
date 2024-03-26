@@ -42,3 +42,13 @@
 p {
   color: #EAEBEC
 }
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.btn-secondary {
+  --bs-btn-color: transparent !important;
+  --bs-btn-bg: transparent !important;
+  --bs-btn-border-color: transparent !important;
+}
