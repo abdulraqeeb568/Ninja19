@@ -7,7 +7,7 @@ import Reveal, {
 
 export default function About() {
   return (
-    <div class="container">
+    <div class="container" id="about-section">
       <div class="section-heading-wrap text-center mb-5">
         <h2 class="heading-h2 text-center divider">
           <span style={{ color: "inherit" }}>About Us</span>

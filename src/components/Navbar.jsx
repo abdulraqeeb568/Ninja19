@@ -11,11 +11,28 @@ import { FiAlignJustify } from "react-icons/fi";
 
 export default function Navbar() {
   const handleSelect = (e) => {
-    e === "option-1"
-      ? console.log("Profile")
-      : e === "option-2"
-      ? console.log("Update Password")
-      : console.log("Logout");
+    if (e === "option-1") {
+      // Scroll to the skills section
+      const aboutSection = document.getElementById("about-section");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (e === "option-2") {
+      const servicesSection = document.getElementById("services-section");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else if (e === "option-3") {
+      const skillsSection = document.getElementById("skills-section");
+      if (skillsSection) {
+        skillsSection.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      const contactSection = document.getElementById("contact-section");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   return (
