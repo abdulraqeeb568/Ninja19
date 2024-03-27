@@ -39,7 +39,6 @@ export default function Skills() {
           <div
             class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
-            data-aos-delay="100"
           >
             <div class="counter-v1 text-center">
               <span class="number-wrap">
@@ -52,7 +51,6 @@ export default function Skills() {
           <div
             class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
-            data-aos-delay="300"
           >
             <div class="counter-v1 text-center">
               <span class="number-wrap">
@@ -65,7 +63,7 @@ export default function Skills() {
           <div
             class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos-delay="100"
           >
             <div class="counter-v1 text-center">
               <span class="number-wrap">
@@ -78,7 +76,7 @@ export default function Skills() {
           <div
             class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
             <div class="counter-v1 text-center">
               <span class="number-wrap">
@@ -91,7 +89,7 @@ export default function Skills() {
           <div
             class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
             <div class="counter-v1 text-center">
               <span class="number-wrap">

@@ -222,7 +222,7 @@ export const Counter = ({
     damping: 100,
     stiffness: 100,
   });
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
     console.log("motion");
