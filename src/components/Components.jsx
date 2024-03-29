@@ -225,7 +225,6 @@ export const Counter = ({
   const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    console.log("motion");
     if (isInView) {
       motionValue.set(direction === "down" ? 0 : value);
     }
