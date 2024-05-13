@@ -20,12 +20,6 @@ export const Footer = () => {
               <li>
                 <a href="#">Instagram</a>
               </li>
-              {/* <li>
-                <a href="#">Dribbble</a>
-              </li>
-              <li>
-                <a href="#">Behance</a>
-              </li> */}
             </ul>
 
             <p class="site-copyright">
