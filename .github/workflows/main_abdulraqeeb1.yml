@@ -1,3 +1,5 @@
+env:
+  NODE_VERSION: '20.x'  
 name: Build and deploy ASP.Net Core app to Azure Web App - abdulraqeeb
 
 on:
@@ -8,10 +10,10 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
- - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ env.NODE_VERSION }}
       uses: actions/setup-node@v1
       with:
