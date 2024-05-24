@@ -1,5 +1,6 @@
 env:
-  NODE_VERSION: '20.x'  
+  NODE_VERSION: '20.x'
+  
 name: Build and deploy ASP.Net Core app to Azure Web App - abdulraqeeb
 
 on:
@@ -19,6 +20,8 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
+      env:
+        CI: false
       run: |
         # Build and test the project, then
         # deploy to Azure Web App.
