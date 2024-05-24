@@ -7,9 +7,9 @@ import Reveal, {
 
 export default function About() {
   return (
-    <div class="container" id="about-section">
-      <div class="section-heading-wrap text-center mb-5">
-        <h2 class="heading-h2 text-center divider">
+    <div className="container" id="about-section">
+      <div className="section-heading-wrap text-center mb-5">
+        <h2 className="heading-h2 text-center divider">
           <span style={{ color: "inherit" }}>About Us</span>
         </h2>
         <span>
@@ -21,8 +21,8 @@ export default function About() {
         </span>
       </div>
 
-      <div class="row mt-5 justify-content-between">
-        <div class="col-lg-6 mb-5 mb-lg-0 justify-content-center d-flex mt-5">
+      <div className="row mt-5 justify-content-between">
+        <div className="col-lg-6 mb-5 mb-lg-0 justify-content-center d-flex mt-5">
           <div style={{ height: "60%" }}>
             <RevealImage height="100%">
               <img
@@ -33,31 +33,31 @@ export default function About() {
             </RevealImage>
           </div>
         </div>
-        <div class="col-lg-6 pr-lg-5  justify-content-center justify-content-md-start d-flex">
+        <div className="col-lg-6 pr-lg-5  justify-content-center justify-content-md-start d-flex">
           <div style={{ width: "74%" }}>
             <SlideContent>
-              <h3 class="mb-4 heading-h3" style={{ color: "inherit" }}>
+              <h3 className="mb-4 heading-h3" style={{ color: "inherit" }}>
                 <span style={{ color: "inherit" }}>
                   We can make it together
                 </span>
               </h3>
             </SlideContent>
             <SlideContent delay={0.2}>
-              <p class="" style={{ color: "inherit" }}>
+              <p className="" style={{ color: "inherit" }}>
                 Ninja Nineteen is a cutting-edge software company dedicated to
                 delivering innovative solutions that empower businesses to
                 thrive in the digital age.
               </p>
             </SlideContent>
             <SlideContent delay={0.4}>
-              <p class="mb-4 " style={{ color: "inherit" }}>
+              <p className="mb-4 " style={{ color: "inherit" }}>
                 With a focus on creativity, efficiency, and excellence, we
                 specialize in crafting custom software solutions tailored to
                 meet the unique needs of each client.
               </p>
             </SlideContent>
             <SlideContent delay={0.6}>
-              <p class="mb-4 " style={{ color: "inherit" }}>
+              <p className="mb-4 " style={{ color: "inherit" }}>
                 Our team of skilled developers and designers are committed to
                 pushing the boundaries of technology to drive success for our
                 clients. Whether you're looking to streamline operations,

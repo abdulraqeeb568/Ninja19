@@ -3,10 +3,10 @@ import React from "react";
 import Reveal, { Counter, SlideContent } from "./Components";
 export default function Skills() {
   return (
-    <div class="unslate_co--section section-counter" id="skills-section">
-      <div class="container">
-        <div class="section-heading-wrap text-center mb-5">
-          <h2 class="heading-h2 text-center divider">
+    <div className="unslate_co--section section-counter" id="skills-section">
+      <div className="container">
+        <div className="section-heading-wrap text-center mb-5">
+          <h2 className="heading-h2 text-center divider">
             <SlideContent>
               <span style={{ color: "inherit" }}>Our Skills</span>
             </SlideContent>
@@ -22,81 +22,81 @@ export default function Skills() {
           </span>
         </div>
 
-        <div class="row pt-5">
+        <div className="row pt-5">
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-5 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-5 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap ">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap ">
                 <Counter value={80} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">WordPress</span>
+              <span className="counter-label">WordPress</span>
             </div>
           </div>
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap">
                 <Counter value={90} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">React</span>
+              <span className="counter-label">React</span>
             </div>
           </div>
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap">
                 <Counter value={90} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">React Native</span>
+              <span className="counter-label">React Native</span>
             </div>
           </div>
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap">
                 <Counter value={95} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">Web API</span>
+              <span className="counter-label">Web API</span>
             </div>
           </div>
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap">
                 <Counter value={85} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">Desktop Apps</span>
+              <span className="counter-label">Desktop Apps</span>
             </div>
           </div>
           <div
-            class="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
+            className="col-6 col-sm-6 mb-5 mb-lg-0 col-md-6 col-lg-4"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="counter-v1 text-center">
-              <span class="number-wrap">
+            <div className="counter-v1 text-center">
+              <span className="number-wrap">
                 <Counter value={90} />
-                <span class="append-text">%</span>
+                <span className="append-text">%</span>
               </span>
-              <span class="counter-label">Windows Services</span>
+              <span className="counter-label">Windows Services</span>
             </div>
           </div>
         </div>

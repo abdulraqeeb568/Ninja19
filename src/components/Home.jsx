@@ -55,7 +55,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+        {/* <a href="#portfolio-section" className="mouse-wrap smoothscroll">
           <span className="mouse">
             <span className="scroll"></span>
           </span>

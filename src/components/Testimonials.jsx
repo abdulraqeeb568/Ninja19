@@ -2,23 +2,23 @@
 import React from "react";
 export default function Testimonials() {
   return (
-    <div class="unslate_co--section" id="testimonial-section">
-      <div class="container">
-        <div class="section-heading-wrap text-center mb-5">
-          <h2 class="heading-h2 text-center divider">
-            <span class="gsap-reveal">My Happy Clients</span>
+    <div className="unslate_co--section" id="testimonial-section">
+      <div className="container">
+        <div className="section-heading-wrap text-center mb-5">
+          <h2 className="heading-h2 text-center divider">
+            <span className="gsap-reveal">My Happy Clients</span>
           </h2>
-          <span class="gsap-reveal">
+          <span className="gsap-reveal">
             <img src="images/divider.png" alt="divider" width="76" />
           </span>
         </div>
       </div>
 
-      <div class="owl-carousel testimonial-slider" data-aos="fade-up">
+      <div className="owl-carousel testimonial-slider" data-aos="fade-up">
         <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
+          <div className="testimonial-v1">
+            <div className="testimonial-inner-bg">
+              <span className="quote">&ldquo;</span>
               <blockquote>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts. Separated
@@ -29,17 +29,19 @@ export default function Testimonials() {
               </blockquote>
             </div>
 
-            <div class="testimonial-author-info">
+            <div className="testimonial-author-info">
               <img src="images/person_man_1.jpg" alt="Image" />
               <h3>Eric Ingram</h3>
-              <span class="d-block position">Product Designer @facebook</span>
+              <span className="d-block position">
+                Product Designer @facebook
+              </span>
             </div>
           </div>
         </div>
         <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
+          <div className="testimonial-v1">
+            <div className="testimonial-inner-bg">
+              <span className="quote">&ldquo;</span>
               <blockquote>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts. Separated
@@ -51,17 +53,19 @@ export default function Testimonials() {
               </blockquote>
             </div>
 
-            <div class="testimonial-author-info">
+            <div className="testimonial-author-info">
               <img src="images/person_man_2.jpg" alt="Image" />
               <h3>Ryan Mullins</h3>
-              <span class="d-block position">Product Designer @Shopify</span>
+              <span className="d-block position">
+                Product Designer @Shopify
+              </span>
             </div>
           </div>
         </div>
         <div>
-          <div class="testimonial-v1">
-            <div class="testimonial-inner-bg">
-              <span class="quote">&ldquo;</span>
+          <div className="testimonial-v1">
+            <div className="testimonial-inner-bg">
+              <span className="quote">&ldquo;</span>
               <blockquote>
                 Far far away, behind the word mountains, far from the countries
                 Vokalia and Consonantia, there live the blind texts. Separated
@@ -73,10 +77,12 @@ export default function Testimonials() {
               </blockquote>
             </div>
 
-            <div class="testimonial-author-info">
+            <div className="testimonial-author-info">
               <img src="images/person_woman_1.jpg" alt="Image" />
               <h3>Erica Miller</h3>
-              <span class="d-block position">Product Designer @Twitter</span>
+              <span className="d-block position">
+                Product Designer @Twitter
+              </span>
             </div>
           </div>
         </div>

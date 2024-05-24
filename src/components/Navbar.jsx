@@ -36,17 +36,17 @@ export default function Navbar() {
   };
 
   return (
-    // <nav class="unslate_co--site-nav site-nav-target">
-    <nav class="unslate_co--site-nav p-1">
-      <div class="container">
-        <div class="row ">
-          <div class="col-5 justify-content-end d-flex">
-            <ul class="site-nav-ul d-none d-lg-inline-block">
-              {/* <li class="has-children">
-                <a href="#home-section" class="nav-link">
+    // <nav className="unslate_co--site-nav site-nav-target">
+    <nav className="unslate_co--site-nav p-1">
+      <div className="container">
+        <div className="row ">
+          <div className="col-5 justify-content-end d-flex">
+            <ul className="site-nav-ul d-none d-lg-inline-block">
+              {/* <li className="has-children">
+                <a href="#home-section" className="nav-link">
                   Home
                 </a>
-                <ul class="dropdown">
+                <ul className="dropdown">
                   <li>
                     <a href="index.html">Hero Image BG</a>
                   </li>
@@ -65,52 +65,52 @@ export default function Navbar() {
                 </ul>
               </li> */}
               {/* <li>
-                <a href="#portfolio-section" class="nav-link">
+                <a href="#portfolio-section" className="nav-link">
                   Projects
                 </a>
               </li> */}
               <li>
-                <a href="#about-section" class="nav-link">
+                <a href="#about-section" className="nav-link">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services-section" class="nav-link">
+                <a href="#services-section" className="nav-link">
                   Services
                 </a>
               </li>
             </ul>
           </div>
-          <div class="col-md-2 text-center d-none d-lg-inline-block">
+          <div className="col-md-2 text-center d-none d-lg-inline-block">
             <img height={40} src={require("../images/ninjaLogo.png")} />
-            {/* <a href="index.html" class="unslate_co--site-logo">
+            {/* <a href="index.html" className="unslate_co--site-logo">
               {Constants.ProjectName}
               <span>.</span>
             </a> */}
           </div>
-          <div class="col-md-5 text-lg-left">
-            <ul class="site-nav-ul text-left d-none d-lg-inline-block">
+          <div className="col-md-5 text-lg-left">
+            <ul className="site-nav-ul text-left d-none d-lg-inline-block">
               <li>
-                <a href="#skills-section" class="nav-link">
+                <a href="#skills-section" className="nav-link">
                   Skills
                 </a>
               </li>
               {/* <li>
-                <a href="#testimonial-section" class="nav-link">
+                <a href="#testimonial-section" className="nav-link">
                   Testimonial
                 </a>
               </li> */}
               <li>
-                <a href="#contact-section" class="nav-link">
+                <a href="#contact-section" className="nav-link">
                   Contact
                 </a>
               </li>
             </ul>
 
             <div className="d-flex justify-content-end ">
-              {/* <ul class="site-nav-ul-none-onepage d-inline-block d-lg-none">
+              {/* <ul className="site-nav-ul-none-onepage d-inline-block d-lg-none">
                 <li>
-                  <a href="#" class="js-menu-toggle">
+                  <a href="#" className="js-menu-toggle">
                     Menu
                   </a>
                 </li>

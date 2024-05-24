@@ -11,10 +11,10 @@ import "../App.css";
 
 export default function Services() {
   return (
-    <div class="unslate_co--section" id="services-section">
-      <div class="container">
-        <div class="section-heading-wrap text-center mb-5">
-          <h2 class="heading-h2 text-center divider">
+    <div className="unslate_co--section" id="services-section">
+      <div className="container">
+        <div className="section-heading-wrap text-center mb-5">
+          <h2 className="heading-h2 text-center divider">
             <SlideContent>
               <span>Our Services</span>
             </SlideContent>
@@ -28,11 +28,11 @@ export default function Services() {
           </span>
         </div>
 
-        <div class="row gutter-v3">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+        <div className="row gutter-v3">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos="fade-up" data-aos-delay="100">
               <AppearFromDown delay={0.25}>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <WebDesign width={45} height={45} />
                 </div>
                 <h3>
@@ -46,10 +46,10 @@ export default function Services() {
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="0">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos="fade-up" data-aos-delay="0">
               <AppearFromDown>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <WebDev width={45} height={45} />
                 </div>
                 <h3>
@@ -63,10 +63,10 @@ export default function Services() {
               </AppearFromDown>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="100">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos="fade-up" data-aos-delay="100">
               <AppearFromDown delay={0.25}>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <WordpressSol width={45} height={45} />
                 </div>
                 <h3>
@@ -79,10 +79,10 @@ export default function Services() {
               </AppearFromDown>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos="fade-up" data-aos-delay="200">
               <AppearFromDown delay={0.5}>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <MobileApps width={45} height={45} />
                 </div>
                 <h3>
@@ -95,10 +95,10 @@ export default function Services() {
               </AppearFromDown>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos-delay="0">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos-delay="0">
               <AppearFromDown>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <DigitalStrategy width={45} height={45} />
                 </div>
                 <h3>
@@ -112,10 +112,10 @@ export default function Services() {
               </AppearFromDown>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="feature-v1" data-aos="fade-up" data-aos-delay="200">
+          <div className="col-md-6 col-lg-4 mb-4">
+            <div className="feature-v1" data-aos="fade-up" data-aos-delay="200">
               <AppearFromDown delay={0.5}>
-                <div class="wrap-icon mb-3">
+                <div className="wrap-icon mb-3">
                   <UserExp width={45} height={45} />
                 </div>
                 <h3>
