@@ -28,11 +28,6 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: build
-        path: build
 
   deploy:
     runs-on: windows-latest
@@ -49,5 +44,5 @@ jobs:
         with:
           app-name: 'abdulraqeeb'
           slot-name: 'Production'
-          package: './build'
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_41188BC4C5F442448AD0B4D5560EE41D }}
